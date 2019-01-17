@@ -1,0 +1,15 @@
+<Response>
+<Gather action="handle-user-input.php" numDigits="1">
+<Say>   Welcome to Da Valley Grill. Hawaiian, style, asian food.</Say>
+<Say>To place an order, press 1.</Say>
+<Say>For store hours, press 2.</Say>
+<Say>For location and directions, press 3.</Say>
+<Say>For help on how to order by texting, press 4.</Say>
+<Say>If you know exactly what, menu item number to order,  just text the menu item number in.</Say>
+</Gather>
+<!--
+ If customer doesn't input anything, prompt and try again. 
+-->
+<Say>Sorry, I didn't get your response.</Say>
+<Redirect>handle-incoming.xml</Redirect>
+</Response>

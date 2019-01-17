@@ -1,0 +1,43 @@
+Key: x_response_code; Value: 1 
+Key: x_response_reason_code; Value: 1 
+Key: x_response_reason_text; Value: (TESTMODE) This transaction has been approved. 
+Key: x_avs_code; Value: P 
+Key: x_auth_code; Value: 000000 
+Key: x_trans_id; Value: 0 
+Key: x_method; Value: CC 
+Key: x_card_type; Value: MasterCard 
+Key: x_account_number; Value: XXXX9621 
+Key: x_first_name; Value: iasudhiaushdiu 
+Key: x_last_name; Value: hiuhiuh 
+Key: x_company; Value: iuh 
+Key: x_address; Value: iuhi 
+Key: x_city; Value: uh 
+Key: x_state; Value: iuhi 
+Key: x_zip; Value: uhi 
+Key: x_country; Value: uhi 
+Key: x_phone; Value: uh 
+Key: x_fax; Value: iuh 
+Key: x_email; Value: uhi 
+Key: x_invoice_num; Value: 20131112120831 
+Key: x_description; Value: Transaction Order for DaValley Grill 
+Key: x_type; Value: auth_capture 
+Key: x_cust_id; Value:  
+Key: x_ship_to_first_name; Value:  
+Key: x_ship_to_last_name; Value:  
+Key: x_ship_to_company; Value:  
+Key: x_ship_to_address; Value:  
+Key: x_ship_to_city; Value:  
+Key: x_ship_to_state; Value:  
+Key: x_ship_to_zip; Value:  
+Key: x_ship_to_country; Value:  
+Key: x_amount; Value: 7.92 
+Key: x_tax; Value: 22.50 
+Key: x_duty; Value: 0.00 
+Key: x_freight; Value: 0.00 
+Key: x_tax_exempt; Value: FALSE 
+Key: x_po_num; Value:  
+Key: x_MD5_Hash; Value: 31F55F780F4C818DCE65292B3A47CF54 
+Key: x_cvv2_resp_code; Value:  
+Key: x_cavv_response; Value:  
+Key: x_test_request; Value: true 
+Key: x_method_available; Value: true 

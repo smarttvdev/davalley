@@ -1,0 +1,99 @@
+<?php
+session_start();
+// Created by CarcaBot
+// 25.09.2013
+// CarcaBot@CarcaBot.ro
+// Shopping Cart API
+
+require_once("SMS_Module/classes/paginare.class.php");
+require_once("SMS_Module/classes/config.php");
+require_once("SMS_Module/classes/mysqli.php");
+require_once("SMS_Module/classes/sql.class.php");
+
+
+
+
+$result = array();
+if($_GET['action'] == 'add') {
+    if (empty($_GET['id'])) {
+        $result['error']['msg'] = "No ID specified";
+    } else {
+
+        $sideOrder = (isset($_GET['sideOrder'])) ? explode(',',$_GET['sideOrder']) : '';
+        $cookWith = "";
+        if(is_array($sideOrder)) {
+            foreach ($sideOrder as $so) {
+                $_item = itemByRealID($so);
+                $cookWith .= sprintf("%s & ", $_item['itemName']);
+            }
+        }
+
+        $item = itemByID($_GET['id']);
+        $cookWith .= $_GET['cookWith'];
+        $item['quantity'] = 1;
+        $item['cookWith'] = ($cookWith != '') ? trim($cookWith) : "";
+        $item['sideOrder'] = $sideOrder;
+        if (changeQuantity($item['itemCode'], $item['cookWith']) == false) {
+            $_SESSION['products'][] = $item;
+        }
+        if ($item > 0) {
+            $result['success']['msg'] = $item['itemName'] . " added to cart";
+        }
+    }
+
+}
+elseif($_GET['action'] == 'getSideOrder') {
+    $id = $_GET['id'];
+    $item = itemByID($id);
+    $sideOrderCat = $item['sideOrderCat'];
+    $sideOrderLimit = $item['sideOrderLimit'];
+    $result['list'] = itemsByCategory($sideOrderCat);
+    $result['sideOrderLimit'] = $sideOrderLimit;
+}
+elseif($_GET['action'] == 'count') {
+    $result['success']['msg'] = count($_SESSION['products']);
+
+}
+elseif($_GET['action'] == 'complete') {
+    $isCompleted = $_GET['complete'];
+    $id = $_GET['id'];
+    markComplete(array(
+        'id'=>$id,
+        'isCompleted'=>$isCompleted
+    ));
+}
+elseif($_GET['action'] == 'setPhone') {
+    $phone = str_replace(array(' ', '+'), array(''), $_GET['phone']);
+    if (!empty($_GET['phone'])) {
+        $result['success']['msg'] = $phone;
+        $_SESSION['phoneNumber'] = $phone;
+
+        foreach($_SESSION['products'] as $order) {
+            $order['phoneNumber'] = $_SESSION['phoneNumber'];
+            placeOrder($order);
+        }
+    }
+}
+
+elseif($_GET['action'] == 'checkPhone') {
+    if (!isset($_SESSION['phoneNumber'])) {
+        $result['error']['msg'] = "Not phone set";
+    } else {
+        $result['success']['msg'] = "OK";
+        $result['success']['phone'] = $_SESSION['phoneNumber'];
+        foreach($_SESSION['products'] as $order) {
+            $order['phoneNumber'] = $_SESSION['phoneNumber'];
+            placeOrder($order);
+        }
+    }
+}
+elseif($_GET['action'] == 'empty') {
+clearOrder($_SESSION['phoneNumber']);
+session_destroy();
+$result['success']['msg'] = 'OK';
+} else {
+    $result['error']['msg'] = 'Not implemented';
+}
+
+
+echo json_encode($result);

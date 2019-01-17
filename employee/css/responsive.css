@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+@media screen and (max-width:1024px)
+
+{
+
+	.Rs-Login
+
+{
+
+	width:100%;
+
+	margin: 35% auto;
+
+}
+
+
+
+body
+
+{
+
+	
+
+}
+
+.ItemList
+
+{
+
+width: 25%;
+
+	height: 60px;
+
+}
+
+
+
+.orderListing
+
+{/*
+
+	background: #fff;
+
+padding: 10px;*/
+
+border-radius: 0px 0px 10px 10px;
+
+}
+
+._userinfo label
+
+{
+
+
+
+}
+
+._userinfo p
+{
+	margin-bottom: 0;
+}
+
+.paddTop50
+
+{
+
+	padding-top:0px;
+
+}
+
+.RightSideBar
+
+{
+
+
+
+}
+
+
+
+.paddTop50
+
+{
+
+	padding-bottom:65px;
+
+
+
+}
+.Order-history .paddTop50
+
+{
+
+	padding-bottom:65px;
+	display: table-cell;
+vertical-align: middle;
+
+
+}
+.Order-history
+
+{
+
+display: table;
+vertical-align: middle;
+}
+
+}
+
+
+

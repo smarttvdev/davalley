@@ -1,0 +1,32 @@
+/**
+ * Copyright 2013 Google Inc. All Rights Reserved
+ */
+
+body {
+  font-family: Verdana;
+  font-size: 10pt;
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 250px;
+  height:250px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid green;
+}
+
+.img-label {
+  font-family: COMIC SANS MS;
+  font-weight:bold
+}
+
+.buy-button {
+  width: 150px;
+  height:50px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  color: #7F5A58
+}

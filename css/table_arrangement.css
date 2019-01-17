@@ -1,0 +1,100 @@
+
+#entertable-dialog .tables-container{
+    width:280px;
+    height:280px;
+}
+
+#entertable-dialog .table-1{
+    position:absolute !important;
+    top:0px;
+    left:150px;
+    width:50px;
+    height:50px;
+    border:2px solid #000 !important;
+    padding:auto;
+}
+
+#entertable-dialog .table-2{
+    position:absolute !important;
+    top:50px;
+    left:10px;
+    width:50px;
+    height:50px;
+    border:2px solid #000;
+    padding:auto;
+}
+
+#entertable-dialog .table-3{
+    position:absolute;
+    top:130px;
+    left:10px;
+    width:50px;
+    height:50px;
+    border:2px solid #000;
+    padding:auto;
+}
+
+#entertable-dialog .table-4{
+    position:absolute;
+    top:150px;
+    left:160px;
+    width:50px;
+    height:50px;
+    border:2px solid #000;
+    padding:auto;
+}
+
+#entertable-dialog .table-5{
+    position:absolute;
+    bottom:20px;
+    right:30px;
+    width:50px;
+    height:50px;
+    border:2px solid #000;
+    padding:auto;
+}
+
+#entertable-dialog .table-6{
+    position:absolute;
+    bottom:100px;
+    right:30px;
+    width:50px;
+    height:50px;
+    border:2px solid #000;
+    padding:auto;
+}
+
+#entertable-dialog .table-7{
+    position:absolute;
+    bottom:140px;
+    right:30px;
+    width:50px;
+    height:50px;
+    border:2px solid #000;
+    padding:auto;
+}
+
+#entertable-dialog .table-8{
+    position:absolute;
+    top:20px;
+    right:30px;
+    width:50px;
+    height:50px;
+    border:2px solid #000;
+    padding:auto;
+}
+
+#entertable-dialog .table-9{
+    position:absolute;
+    top:0px;
+    left:150px;
+    width:100px;
+    height:100px;
+    border:2px solid #000;
+    border-radius:50%;
+    padding:auto;
+}
+
+
+
+

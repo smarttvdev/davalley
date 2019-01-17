@@ -1,0 +1,98 @@
+
+
+Business ID
+Business name (30)
+Business phone (15)
+Business address (50)
+Business address2 (50)
+City (30)
+zip (10)
+Date added
+
+
+Menu table
+Category(10)
+Items code(20)
+description(30)
+ordered qty (int)
+price (float)
+
+Customer table
+Customer ID (15)
+Name (30)
+Date added
+Cell phone (15)
+email(40)
+preference items(1-10)
+
+Order table
+Customer ID (15)
+date ordered (date)
+time ordered (time)
+item code ordered (20)
+description (30)
+picture (image) - store images on website
+Item selected on cell phone (item)
+qty ordered (int)
+
+
+_________________________________________
+Design
+
+Customer text business phone  -->  
+
+Website response(text back) ->    
+
+Business name
+1.Direction
+2.Open hours
+3.Send PDF menu
+4.Menu    ------->Menu
+5.Order	 ---|	1.Item1 description
+6.About Us  |	2.Item2 description
+	    |	3.Item3 description
+	    |	4.Item4 description
+	    |	5.Item5 descritpion
+	    |	6.next
+	    |	7.Order(1-max) ?
+	    |	8.Show picture
+	    |	9.Go Back
+	    |
+	    |--------> Order
+			Selection ?
+			Quantity ?
+			Confirm (Y/N)   (display what items ordered and qty and confirm)
+					(send email link to website and request payment)
+
+
+			
+When the customer press 3  it should display Categories first.  After it display categories then display items next.  If customer keep pressing 6.next, then display the next 5 items until customer selects one or press 8.show picture.
+If no categories, then just display only items
+
+
+___________ Re-design
+
+Since categories of items would be difficult and slow to work with in sms for elderly.  I need to change it to a flat design.   
+Items 1-99    are Lunch & Dinner 
+items 100-199 are Beverages
+items 200-299 are Deserts
+items 300-399 are Others
+
+When customer text the twilio number, the following menu will appear automatically. Return customer will text O to start ordering but new customer will text D to download detail menu and return to order.  THis is a flat menu system and will be the least amount of texting to get items ordered.
+
+
+Business Name
+1. Chicken w/VG sauce
+2. Chicken w/Lemon grass
+3. Shrimp w/VG sauce
+4. Beef Cubes w/VGS
+5. Tofu strips w/VGS
+6. Mixed veg w/VGS
+7. Kailua Pork
+8. Barbeque chicken
+9. Kahuku style Shrimp
+
+O. Order items
+N. Next items page
+D. Download menu
+

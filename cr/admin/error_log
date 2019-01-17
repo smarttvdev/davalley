@@ -1,0 +1,2 @@
+[15-Feb-2017 03:12:54 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/innovasoftware1/public_html/davalleygrill.com/SMS_Module/classes/sql.class.php on line 186
+[15-Feb-2017 03:14:10 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/innovasoftware1/public_html/davalleygrill.com/SMS_Module/classes/sql.class.php on line 186
