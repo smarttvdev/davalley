@@ -222,7 +222,7 @@ return $orderList;
 function orderPaidListBuzz($phone,$limit='',$read) {
 global $mysqli;  
     $orderList = array();
-   $q = "SELECT ordersPaid.*, items.* FROM ordersPaid LEFT JOIN items ON items.itemCode=ordersPaid.itemID " ;
+   $q = "SELECT ordersPaid.*, items.* FROM ordersPaid LEFT JOIN items ON items.itemID=ordersPaid.itemID " ;
     $res = $mysqli->query($q);
     $num_rows = $res->num_rows;
     $i=0;
