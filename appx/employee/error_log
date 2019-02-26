@@ -18128,3 +18128,125 @@ Stack trace:
 [22-Jan-2019 00:44:27 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
 [22-Jan-2019 00:44:27 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
 [21-Jan-2019 19:14:28 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 07:03:18 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 12:33:18 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 86
+[21-Feb-2019 12:33:18 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on boolean in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php:87
+Stack trace:
+#0 /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/index.php(11): Classes->get_current_order_detail()
+#1 {main}
+  thrown in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 87
+[21-Feb-2019 07:03:26 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 12:33:26 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 86
+[21-Feb-2019 12:33:26 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on boolean in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php:87
+Stack trace:
+#0 /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/index.php(11): Classes->get_current_order_detail()
+#1 {main}
+  thrown in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 87
+[21-Feb-2019 07:03:27 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 12:33:27 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 86
+[21-Feb-2019 12:33:27 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on boolean in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php:87
+Stack trace:
+#0 /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/index.php(11): Classes->get_current_order_detail()
+#1 {main}
+  thrown in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 87
+[21-Feb-2019 07:03:34 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 12:33:34 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 86
+[21-Feb-2019 12:33:34 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on boolean in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php:87
+Stack trace:
+#0 /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/index.php(11): Classes->get_current_order_detail()
+#1 {main}
+  thrown in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 87
+[21-Feb-2019 12:33:49 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/functions.php on line 2
+[21-Feb-2019 12:33:49 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
+[21-Feb-2019 12:33:49 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
+[21-Feb-2019 07:03:52 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 07:04:01 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 12:34:01 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 86
+[21-Feb-2019 12:34:01 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on boolean in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php:87
+Stack trace:
+#0 /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/index.php(11): Classes->get_current_order_detail()
+#1 {main}
+  thrown in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 87
+[21-Feb-2019 07:04:18 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 12:34:18 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 86
+[21-Feb-2019 12:34:18 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on boolean in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php:87
+Stack trace:
+#0 /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/index.php(11): Classes->get_current_order_detail()
+#1 {main}
+  thrown in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 87
+[21-Feb-2019 12:34:47 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/functions.php on line 2
+[21-Feb-2019 12:34:47 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
+[21-Feb-2019 12:34:47 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
+[21-Feb-2019 07:04:48 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 07:04:54 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 12:34:54 Asia/Kolkata] PHP Notice:  Trying to get property of non-object in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/ajaxServer.php on line 41
+[21-Feb-2019 07:05:02 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 12:35:02 Asia/Kolkata] PHP Notice:  Trying to get property of non-object in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/ajaxServer.php on line 41
+[21-Feb-2019 07:05:04 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 12:35:04 Asia/Kolkata] PHP Notice:  Trying to get property of non-object in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/ajaxServer.php on line 41
+[21-Feb-2019 07:10:18 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 12:41:49 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/functions.php on line 2
+[21-Feb-2019 12:41:49 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
+[21-Feb-2019 12:41:49 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
+[21-Feb-2019 07:11:50 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 07:11:55 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 12:41:55 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 86
+[21-Feb-2019 12:41:55 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on boolean in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php:87
+Stack trace:
+#0 /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/index.php(11): Classes->get_current_order_detail()
+#1 {main}
+  thrown in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 87
+[21-Feb-2019 15:44:50 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[21-Feb-2019 21:14:50 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 86
+[21-Feb-2019 21:14:50 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
+[21-Feb-2019 21:14:50 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
+[21-Feb-2019 15:44:53 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 09:32:25 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 15:02:25 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 86
+[26-Feb-2019 15:02:25 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
+[26-Feb-2019 15:02:25 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
+[26-Feb-2019 09:32:27 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 15:02:31 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/payment.php on line 9
+[26-Feb-2019 15:02:31 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/payment.php on line 12
+[26-Feb-2019 15:02:31 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/payment.php on line 14
+[26-Feb-2019 15:02:31 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 145
+[26-Feb-2019 15:02:31 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/payment.php on line 15
+[26-Feb-2019 15:02:31 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 369
+[26-Feb-2019 09:32:33 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 15:02:33 Asia/Kolkata] PHP Notice:  Undefined index: employee_name in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/search.php on line 11
+[26-Feb-2019 15:02:33 Asia/Kolkata] PHP Notice:  Undefined index: employee_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 277
+[26-Feb-2019 15:02:33 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
+[26-Feb-2019 15:02:33 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
+[26-Feb-2019 15:02:35 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/functions.php on line 2
+[26-Feb-2019 15:02:35 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
+[26-Feb-2019 15:02:35 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
+[26-Feb-2019 09:32:36 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 09:32:42 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 09:32:49 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 09:32:58 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 09:32:58 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 15:02:58 Asia/Kolkata] PHP Notice:  Undefined index: order_id in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/classes.php on line 86
+[26-Feb-2019 15:02:58 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
+[26-Feb-2019 15:02:58 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
+[26-Feb-2019 09:32:58 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 15:03:01 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/functions.php on line 2
+[26-Feb-2019 15:03:01 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
+[26-Feb-2019 15:03:01 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
+[26-Feb-2019 09:33:01 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 09:33:02 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 09:33:11 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 09:33:11 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 15:03:11 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
+[26-Feb-2019 15:03:11 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
+[26-Feb-2019 09:33:12 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 09:33:22 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 15:03:22 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
+[26-Feb-2019 15:03:22 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
+[26-Feb-2019 09:33:24 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 15:03:24 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
+[26-Feb-2019 15:03:24 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
+[26-Feb-2019 09:33:25 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[26-Feb-2019 15:03:29 Asia/Kolkata] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/functions.php on line 2
+[26-Feb-2019 15:03:29 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
+[26-Feb-2019 15:03:29 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
+[26-Feb-2019 09:33:30 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
