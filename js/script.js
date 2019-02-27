@@ -758,64 +758,6 @@ function openEnterTable(id,name,sideOrders) {
     $AddToCartDialog.dialog("open");
 }
 
-// function openEnterTable(id,name,sideOrders) {
-//     var $AddToCartDialog = $("#entertable-dialog");
-//     var selectedTable , selectedSelector = '.table-' + selectedTable;
-//     $AddToCartDialog.dialog({
-//         autoOpen: false,
-//         height: 440,
-//         width: 320,
-//         modal: true,
-//         open: function(event, ui) {
-// 	        //$(selectedSelector).css('color','#ee1981');
-// 	        //$(selectedSelector ).css('border-color' , '#ee1981');
-// 	    $('.entertable').click(function(){
-// 	       if (selectedTable !== undefined){
-// 	           selectedSelector = '.table-' + selectedTable;
-// 	           $(selectedSelector).css('color' , '#000');
-// 	           $(selectedSelector).css('border-color' , '#000');
-// 	        }
-// 	    	var currentSelector = '.table-' + $(this).html();
-// 	        $(currentSelector ).css('color' , '#ee1981');
-// 	        $(currentSelector ).css('border-color' , '#ee1981');
-//
-// 	    	selectedTable = $(this).html();
-// 	    	$('.table-selected').html(selectedTable);
-// 	    });
-//             $("body").click(function() {
-//                 $('#cookWith').focus();
-//             });
-//         },
-//         buttons: {
-//             Cancel: function() {
-//                 $(this).dialog("close");
-//                 $("body").unbind("click");
-//             },
-//             Ok: function() {
-// 		//alert("hi");
-//                 var paramsUrl = API + "?action=tableSelected&tableNum=" + selectedTable;
-//                 if (selectedTable !== undefined){
-//                     $.getJSON(paramsUrl, function (data) {
-//                         console.log(data);
-//                         if (data.error) {
-//                             alert(data.error.msg);
-//                         } else {
-//                             alert(data.success.msg);
-//                             $AddToCartDialog.dialog("close");
-//                         }
-//
-//                     });
-//                 }
-//             }
-//         }
-//     });
-//     $AddToCartDialog.dialog('option', 'title',"Select table#");
-//     $AddToCartDialog.dialog("open");
-// }
-
-
- 
- 
 function setPhoneDialog() {
 	var phone = prompt("Enter contact phone number :\ni.e. 1 234 567 8901");
 	

@@ -289,7 +289,7 @@ if(!isset($_SESSION["tipType"]))
 
 					?>
 					
-					<form id='checkOutSubmit' method='post' action='<?php echo $url; ?>' >				   
+					<form id='checkOutSubmit' method='post' action='<?php echo $url; ?>' >
 						<input type='hidden' name='x_login'  value='<?php echo $loginID; ?>' readonly/>
 						<input type='hidden' name='x_amount'  value='<?php echo $amount; ?>' readonly/>
 						<input type='hidden' name='x_description'  value='<?php echo $description; ?>' readonly/>
