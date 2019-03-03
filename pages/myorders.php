@@ -283,7 +283,7 @@ if(!isset($_SESSION["tipType"]))
 						$fp_sequence = $time;
 
 						if( phpversion() >= '5.1.2' )
-							$fingerprint = hash_hmac("md5", $loginID . "^" . $fp_sequence . "^" . $time . "^" . $amount . "^", $transactionKey); 
+							$fingerprint = hash_hmac("sha512", $loginID . "^" . $fp_sequence . "^" . $time . "^" . $amount . "^", $transactionKey);
 						else 
 							$fingerprint = bin2hex(mhash($CONFIG['AUTHORIZE_MD5_HASH'], $loginID . "^" . $fp_sequence . "^" . $time . "^" . $amount . "^", $transactionKey));
 
@@ -291,15 +291,15 @@ if(!isset($_SESSION["tipType"]))
 					
 					<form id='checkOutSubmit' method='post' action='<?php echo $url; ?>' >
 						<input type='hidden' name='x_login'  value='<?php echo $loginID; ?>' readonly/>
-						<input type='hidden' name='x_amount'  value='<?php echo $amount; ?>' readonly/>
+<!--						<input type='hidden' name='x_amount'  value='--><?php //echo $amount; ?><!--' readonly/>-->
 						<input type='hidden' name='x_description'  value='<?php echo $description; ?>' readonly/>
 						<input type='hidden' name='x_invoice_num'  value='<?php echo $invoice; ?>' readonly/>
-						<input type='hidden' name='x_fp_sequence'  value='<?php echo $fp_sequence; ?>' readonly/>
-						<input type='hidden' name='x_fp_timestamp'  value='<?php echo $time; ?>' readonly/>
-						<input type='hidden' name='x_fp_hash'  value='<?php echo $fingerprint; ?>' readonly/>
+<!--						<input type='hidden' name='x_fp_sequence'  value='--><?php //echo $fp_sequence; ?><!--' readonly/>-->
+<!--						<input type='hidden' name='x_fp_timestamp'  value='--><?php //echo $time; ?><!--' readonly/>-->
+<!--						<input type='hidden' name='x_fp_hash'  value='--><?php //echo $fingerprint; ?><!--' readonly/>-->
 						<input type='hidden' name='x_test_request'  value='<?php echo$testMode; ?>' readonly/>
 						<input type='hidden' name='x_show_form'  value='PAYMENT_FORM' readonly/>
-						<input type='hidden' name='x_relay_response'  value='true' readonly/>
+						<input type='hidden' name='x_relay_response'  value='TRUE' readonly/>
 						<input type='hidden' name='x_relay_url'  value='<?php echo $CONFIG['x_relay_url']; ?>' readonly/>
 						<input type='hidden' name='x_cust_id' id='x_cust_id'  value='<?php echo $_SESSION['phoneNumber']; ?>' readonly/>
 						<INPUT TYPE='hidden' name='x_version' VALUE='3.1'  readonly/>
