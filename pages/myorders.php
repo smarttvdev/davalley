@@ -276,7 +276,7 @@ if(!isset($_SESSION["tipType"]))
 						$amount 		= $totalPrice;
 						$description 	= "Transaction Order for " . $CONFIG['company'];
 						$label 			= "Place Order"; // The is the label on the 'submit' button
-						$testMode		= "false"; // authorize.net test mode		
+						$testMode		= "true"; // authorize.net test mode
 						$invoice = GetUniqueID();
 						$_SESSION['orderID'] = $invoice ;
  						$time = time();

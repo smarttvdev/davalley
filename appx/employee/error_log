@@ -18250,3 +18250,13 @@ Stack trace:
 [26-Feb-2019 15:03:29 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 317
 [26-Feb-2019 15:03:29 Asia/Kolkata] PHP Notice:  Undefined variable: current_order_total in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/include/footer.php on line 324
 [26-Feb-2019 09:33:30 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[28-Feb-2019 13:09:21 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[28-Feb-2019 18:39:21 Asia/Kolkata] PHP Notice:  Undefined index: ID in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/ajaxServer.php on line 107
+[28-Feb-2019 13:09:34 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[28-Feb-2019 18:39:34 Asia/Kolkata] PHP Notice:  Undefined index: ID in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/ajaxServer.php on line 107
+[28-Feb-2019 13:09:50 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[28-Feb-2019 18:39:50 Asia/Kolkata] PHP Notice:  Undefined index: ID in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/ajaxServer.php on line 107
+[28-Feb-2019 13:10:05 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[28-Feb-2019 18:40:05 Asia/Kolkata] PHP Notice:  Undefined index: ID in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/ajaxServer.php on line 107
+[28-Feb-2019 13:10:42 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/config.php on line 2
+[28-Feb-2019 18:40:42 Asia/Kolkata] PHP Notice:  Undefined index: ID in /home/innovasoftware1/public_html/davalleygrill.com/appx/employee/ajaxServer.php on line 107

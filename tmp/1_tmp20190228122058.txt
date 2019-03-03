@@ -1,0 +1,24 @@
+------------------Receipt# 1562
+Da Valley Grill
+
+Hawaiian Style Asian Food
+
+2040 W.Deer Vallery Rd.
+
+Phoenix, AZ 85032
+
+
+
+#--Items----------------------------Qty-Amount
+1 Chicken with special sauce          1  7.5
+  with Mac Salad & hi
+2 Shrimp with special sauce           1  9.99
+  with Coleslaw & hi
+
+    		            	    Tax:$1.5
+
+
+    		            	    Tip:$0.00
+
+
+    		            	Total: $18.99
