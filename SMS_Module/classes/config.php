@@ -15,7 +15,8 @@ $CONFIG['phoneNumber'] = '+16029046356';
 #$CONFIG['loginID'] = '98fdADs34'; // sandbox login
 #$CONFIG['transactionKey'] = '59Nw9zxJ3827UvRG'; // sandbox transactionKey
 $CONFIG['loginID'] = '846NJhs2'; // login
-$CONFIG['transactionKey'] = '4A7u6F3A2spCM58V'; // transactionKey
+$CONFIG['transactionKey'] = '2n378YvbV4W5jZ33'; // transactionKey
+$CONFIG['signature_key']="281D7A8C07B5E46ABE76C5AB2EDDBCEBB51D7BF300B1F4EFD31B7F655CBA176663F8FF076C9B433039CA4831C940AD05DE6948458E5DB436A486DC975834CFE6";
 
 
 // END AUTHORIZE.NET CONFIG //

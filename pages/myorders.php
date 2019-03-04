@@ -275,7 +275,7 @@ if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
                 $loginID		= $CONFIG['loginID'];
                 $transactionKey = $CONFIG['transactionKey'];
 
-                $signature_key="3C3A4F86214BEBC8C64097050FE19075F1FA7F6DFA6EE08DB40AD3D38C17151DAA43D008FAEC14E17A3311651EA259EEE33FE79693DE08E823942615B2E259C7";
+                $signature_key=$CONFIG['signature_key'];
                 $amount 		= $totalPrice;
                 $textToHash="^". $loginID."^". $transactionKey ."^". $amount."^";
                 $description 	= "Transaction Order for " . $CONFIG['company'];
@@ -285,23 +285,17 @@ if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
                 $_SESSION['orderID'] = $invoice ;
                 $time = time();
                 $fp_sequence = $time;
-
-                if( phpversion() >= '5.1.2' )
-                    $fingerprint = hash_hmac("sha512", $loginID . "^" . $fp_sequence . "^" . $time . "^" . $amount . "^", $transactionKey);
-                else
-                    $fingerprint = bin2hex(mhash($CONFIG['AUTHORIZE_MD5_HASH'], $loginID . "^" . $fp_sequence . "^" . $time . "^" . $amount . "^", $transactionKey));
-
-                //                $fingerprint = hash_hmac('sha512', $textToHash, hex2bin($signatureKey));
+                $fingerprint = AuthorizeNetSIM_Form::getFingerprint($loginID, $transactionKey, $amount, $fp_sequence, $time);
                 ?>
 
                 <form id='checkOutSubmit' method='post' action='<?php echo $url; ?>' >
                     <input type='hidden' name='x_login'  value='<?php echo $loginID; ?>' readonly/>
-                    <!--						<input type='hidden' name='x_amount'  value='--><?php //echo $amount; ?><!--' readonly/>-->
+                    <input type='hidden' name='x_amount'  value='<?php echo $amount; ?>' readonly/>
                     <input type='hidden' name='x_description'  value='<?php echo $description; ?>' readonly/>
                     <input type='hidden' name='x_invoice_num'  value='<?php echo $invoice; ?>' readonly/>
-                    <!--						<input type='hidden' name='x_fp_sequence'  value='--><?php //echo $fp_sequence; ?><!--' readonly/>-->
-                    <!--						<input type='hidden' name='x_fp_timestamp'  value='--><?php //echo $time; ?><!--' readonly/>-->
-                    <!--						<input type='hidden' name='x_fp_hash'  value='--><?php //echo $fingerprint; ?><!--' readonly/>-->
+                    <input type='hidden' name='x_fp_sequence'  value='<?php echo $fp_sequence; ?>' readonly/>
+                    <input type='hidden' name='x_fp_timestamp'  value='<?php echo $time; ?>' readonly/>
+                    <input type='hidden' name='x_fp_hash'  value='<?php echo $fingerprint; ?>' readonly/>
                     <input type='hidden' name='x_test_request'  value='<?php echo$testMode; ?>' readonly/>
                     <input type='hidden' name='x_show_form'  value='PAYMENT_FORM' readonly/>
                     <input type='hidden' name='x_relay_response'  value='TRUE' readonly/>
