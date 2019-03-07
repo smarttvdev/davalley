@@ -118,16 +118,16 @@ global $mysqli, $CONFIG;
 	$result = $mysqli->query($query);
 	$i=0;
 	while($row = $result->fetch_array(MYSQLI_ASSOC)) {
-	$itemsList[$i]['id'] = $row['itemID'];
-	$itemsList[$i]['itemCode'] = $row['itemCode'];	
-	$itemsList[$i]['catID'] = $row['categoryID'];
-	$itemsList[$i]['categoryName'] = $row['CategoryName'];
-    $itemsList[$i]['sideOrderCat'] = $row['sideOrderCat'];
-	$itemsList[$i]['name'] = $row['itemName'];
-	$itemsList[$i]['description'] = $row['itemDescription'];
-	$itemsList[$i]['price'] = $row['itemPrice'];
-	$itemsList[$i]['image'] = $row['itemImage'];
-	$i++;
+        $itemsList[$i]['id'] = $row['itemID'];
+        $itemsList[$i]['itemCode'] = $row['itemCode'];
+        $itemsList[$i]['catID'] = $row['categoryID'];
+        $itemsList[$i]['categoryName'] = $row['CategoryName'];
+        $itemsList[$i]['sideOrderCat'] = $row['sideOrderCat'];
+        $itemsList[$i]['name'] = $row['itemName'];
+        $itemsList[$i]['description'] = $row['itemDescription'];
+        $itemsList[$i]['price'] = $row['itemPrice'];
+        $itemsList[$i]['image'] = $row['itemImage'];
+        $i++;
 	}
 return $itemsList;
 }
@@ -190,7 +190,7 @@ global $mysqli;
     $phoneNumber = ($phone != '') ? ' AND ordersPaid.phoneNumber=\''.$phone.'\'' : '';
     $orderList = array();
 //    $q = "SELECT ordersPaid.*, items.itemName, items.itemDescription, items.itemPrice, items.itemID, items.itemCode, items.itemAudio, customers.cName FROM ordersPaid LEFT JOIN `items` ON (items.itemCode=ordersPaid.itemID) LEFT JOIN `customers` ON (ordersPaid.phone=customers.cPhone) ".$phoneNumber." ORDER BY orderID DESC " . $limit;
-    $q = "SELECT ordersPaid.*, items.itemName, items.itemDescription, items.itemPrice, items.itemID, items.itemCode, items.itemAudio, customers.cName FROM ordersPaid LEFT JOIN `items` ON (items.itemCode=ordersPaid.itemID) LEFT JOIN `customers` ON (ordersPaid.phone=customers.cPhone) ".$phoneNumber." ORDER BY orderID DESC " . $limit;
+    $q = "SELECT ordersPaid.*, items.itemName, items.itemDescription, items.itemPrice, items.itemID, items.itemCode, items.itemAudio, customers.cName FROM ordersPaid LEFT JOIN `items` ON (items.itemID=ordersPaid.itemID) LEFT JOIN `customers` ON (ordersPaid.phone=customers.cPhone) ".$phoneNumber." ORDER BY orderID DESC, dateOrdered DESC " . $limit;
     $res = $mysqli->query($q) or trigger_error($mysqli->error."[$q]");;
     $num_rows = $res->num_rows;
 	$i=0;
