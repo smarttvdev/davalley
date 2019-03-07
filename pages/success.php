@@ -121,48 +121,6 @@ require_once("../SMS_Module/classes/sql.class.php");
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!---->
-<!--<div id="entertable-dialog" style="display:none;">-->
-<!--    <div class="tables-container">-->
-<!--        <img src="--><?php //echo $CONFIG['site'];?><!--/images/table.png" width="280" height="280">-->
-<!--        <div class="table-1 entertable" style="position:absolute;top:15px;left:130px;width:23px;height:25px;padding-left:12px;padding-top:10px;-->
-<!--            border:3px solid #000; cursor: -webkit-grab; cursor: grab;">1</div>-->
-<!--        <div class="table-2 entertable" style="position:absolute;top:70px;left:30px;width:23px;height:25px;padding-left:12px;padding-top:10px;-->
-<!--            border:3px solid #000; cursor: -webkit-grab; cursor: grab;">2</div>-->
-<!--        <div class="table-3 entertable" style="position:absolute;top:146px;left:30px;width:23px;height:25px;padding-left:12px;padding-top:10px;-->
-<!--            border:3px solid #000; cursor: -webkit-grab; cursor: grab;">3</div>-->
-<!--        <div class="table-4 entertable" style="position:absolute;top:175px;left:140px;width:23px;height:25px;padding-left:12px;padding-top:10px;-->
-<!--            border:3px solid #000; cursor: -webkit-grab; cursor: grab;">4</div>-->
-<!--        <div class="table-5 entertable" style="position:absolute;top:220px;left:230px;width:23px;height:25px;padding-left:12px;padding-top:10px;-->
-<!--            border:3px solid #000; cursor: -webkit-grab; cursor: grab;">5</div>-->
-<!--        <div class="table-6 entertable" style="position:absolute;top:150px;left:230px;width:23px;height:25px;padding-left:12px;padding-top:10px;-->
-<!--            border:3px solid #000; cursor: -webkit-grab; cursor: grab;">6</div>-->
-<!--        <div class="table-7 entertable" style="position:absolute;top:100px;left:230px;width:23px;height:25px;padding-left:12px;padding-top:10px;-->
-<!--            border:3px solid #000; cursor: -webkit-grab; cursor: grab;">7</div>-->
-<!--        <div class="table-8 entertable" style="position:absolute;top:30px;left:230px;width:23px;height:25px;padding-left:12px;padding-top:10px;-->
-<!--            border:3px solid #000; cursor: -webkit-grab; cursor: grab;">8</div>-->
-<!--        <div class="table-9 entertable" style="position:absolute;top:75px;left:110px;width:42px;height:45px;padding-left:35px;padding-top:30px;-->
-<!--        border:3px solid #000;border-radius:50%; cursor: -webkit-grab; cursor: grab">9</div>-->
-<!--    </div>-->
-<!--    <p class="alert-text">You selected table#<span class="table-selected"></span></p>-->
-<!--    </div>-->
-<!--</div>-->
-
     <h2>Thank You!</h2>
     <h3>Your transaction was successfully ! <?php echo $conf_number;?>
         <input type='button' id='EnterTableBtn' class='button button2' value='Enter Table#' style="float:right;">
