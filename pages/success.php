@@ -4,16 +4,17 @@ include_once("../SMS_Module/classes/config.php");
 require_once("../SMS_Module/classes/mysqli.php");
 require_once("../SMS_Module/classes/sql.class.php");
 
-		$invoice = GetUniqueID();
-		$_SESSION['orderID'] = $invoice;
-$conf_number = "";
-if(isset($_SESSION['orderID'])) { $conf_number = "Your confirmation number is #" . $_SESSION['orderID']; }
-            $orderID = orderPaid($_SESSION['phoneNumber']);
-            clearOrder($_SESSION['phoneNumber']);
-           // $_SESSION['flag_uniqueINV'] = false;
-            $_SESSION['tableSelected'] = false;
-            $_SESSION['gone_table']=true;
-            echo('<script>console.log('.json_encode($_SESSION).')</script>');
+    $invoice = GetUniqueID();
+    $_SESSION['orderID'] = $invoice;
+
+    $conf_number = "";
+    if(isset($_SESSION['orderID'])) { $conf_number = "Your confirmation number is #" . $_SESSION['orderID']; }
+        $orderID = orderPaid($_SESSION['phoneNumber']);
+        clearOrder($_SESSION['phoneNumber']);
+       // $_SESSION['flag_uniqueINV'] = false;
+        $_SESSION['tableSelected'] = false;
+        $_SESSION['gone_table']=true;
+        echo('<script>console.log('.json_encode($_SESSION).')</script>');
 ?>
 
 <link rel="stylesheet" href="/js/css/smoothness/jquery-ui-1.10.4.custom.min.css" />

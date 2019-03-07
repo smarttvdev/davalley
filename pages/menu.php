@@ -1,4 +1,4 @@
-::<?php
+<?php
 session_start();
 // Created by CarcaBot
 // 25.09.2013
@@ -65,7 +65,9 @@ require_once("../SMS_Module/classes/sql.class.php");
 </div>
 
         <strong>Check out our menu</strong>
-	<h2 style="margin-right: 6px; font-size:14px;"><a href="<?php echo $CONFIG['menu_url']; ?>" style="color: #f1f1f1">Download menu (*.png)</a><span style="float:right;"><select name="category" id="categoryChange"><option value="0">Select Category</option><?php foreach($categories as $category) { $selected = ($_GET['cat'] == $category['id']) ? 'selected' : ''; echo '<option value="'.$category['id'].'" '.$selected.'>'.$category['name'].'</option>';} ?> </select></span></h2>
+	<h2 style="margin-right: 6px; font-size:14px;"><a href="<?php echo $CONFIG['menu_url']; ?>" style="color: #f1f1f1">Download menu (*.png)</a><span style="float:right;"><select name="category" id="categoryChange"><option value="0">Select Category</option>
+                <?php foreach($categories as $category) { $selected = ($_GET['cat'] == $category['id']) ? 'selected' : '';
+                    echo '<option value="'.$category['id'].'" '.$selected.'>'.$category['name'].'</option>';} ?> </select></span></h2>
       
        <table class="table4 table3">
             <thead>
@@ -138,7 +140,7 @@ if(empty($items)) {
        <div class="pagination">
 	   <?php echo $pages->display_pages(); ?>
         </div>
-          <script>
+      <script>
 		removeInvoice();
  	 </script>
 

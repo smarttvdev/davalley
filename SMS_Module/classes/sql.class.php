@@ -47,7 +47,7 @@ global $mysqli;
 	}
 }
 function GetUniqueID() {
-global $mysqli, $CONFIG;
+    global $mysqli, $CONFIG;
     //$query = "SELECT MAX(OrderID) as last FROM ordersPaid";
     if (!$_SESSION['flag_uniqueINV']){
 	    $query = "select Invoice from sysfile limit 1";

@@ -37,7 +37,6 @@ if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
             element.click();
             document.body.removeChild(element);}
 
-
         function processSwipe(value) {
             var parsedSwipe = parseSwipe(value);
             if (parsedSwipe.CreditCardNumber) {
@@ -145,7 +144,6 @@ if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
 
             });
         });
-
 
     </script>
     <div id="swipe-dialog" style="display:none;">

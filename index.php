@@ -14,14 +14,8 @@ require_once("SMS_Module/classes/config.php");
 $j = "";
 
 if(isset($_GET['so']) && isset($_GET['From'])){
-
-      
-
-      $i = $_GET['so'];     
-
+      $i = $_GET['so'];
       $j = $_GET['From'];
-
-    
 }
 if($i == 1 && $j != '') {
 

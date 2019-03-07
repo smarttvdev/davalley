@@ -74,23 +74,29 @@ $result = array();
 		$result['success']['msg'] = "OK";
 	}
 	
-	
-	
-	
-	
-	if($_GET["action"] == "removeInvoice") {	
+	if($_GET["action"] == "removeInvoice") {
 	$result['success']['msg'] = json_encode($_SESSION);	
 		if(isset($_SESSION['gone_table'])){
 			unset($_SESSION['gone_table']);	
 			//$_SESSION['flag_uniqueINV'] = false;
 			//$_SESSION['uniqueINV'] = 0;	
 			clearOrder($_SESSION['phoneNumber']);
-			session_destroy();			
+//			session_destroy();
+            if (isset($_SESSION['uniqueINV']))
+                unset($_SESSION['uniqueINV']);
+            if (isset($_SESSION['flag_uniqueINV']))
+                unset($_SESSION['flag_uniqueINV']);
+            if (isset($_SESSION['orderID']))
+                unset($_SESSION['orderID']);
+            if (isset($_SESSION['tableSelected']))
+                unset($_SESSION['tableSelected']);
+            if (isset($_SESSION['uniqueINV']))
+                unset($_SESSION['uniqueINV']);
+
 		}
 		
 	}
 
-	
 	
 
 if($_GET['action'] == 'add') {
