@@ -266,11 +266,8 @@ $(document).ready(function(){
         <label for="email">Enter Amount:</label>
         <input type="number" step=".01" placeholder="Enter Amount" name="cart_manual_amount" id="cart_manual_amount" value="">
         </div>
-            
             <button type="button" class="swip_btn_submit" >Submit</button>
             <button type="button" class="" data-dismiss="modal">Close</button>
-        
-
       </div>
       <div class="modal-footer">
         

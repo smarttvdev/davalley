@@ -1,0 +1,21 @@
+------------------Receipt# 324
+Da Valley Grill
+Hawaiian Style Asian Food
+2040 W.Deer Vallery Rd.
+Phoenix, AZ 85032
+
+
+#--Items----------------------------Qty-Amount
+ 1 Shrimp Katsu                        1  9.95
+ 
+                                    Discount:$2.09
+
+    		            	    Tips:$2.09
+
+    		            	    Total: $10.45
+
+            		            Tender:$0
+
+    		            	    Cash Change:$0
+
+    		            	    Charge: $10.45

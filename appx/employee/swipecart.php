@@ -198,9 +198,9 @@ foreach($get_order_items as $order){
 	$i++;
 }
 ?>
-						<INPUT TYPE='HIDDEN' name='x_tax' VALUE='Tax<|>state tax<|><?php echo $obj->get_tax_amount(); ?>'>
-						<INPUT TYPE='HIDDEN' name='x_duty' VALUE='Tip<|>     Tip<|><?php echo $get_payment_info['tip_amt']; ?>'>
-						<input type='submit' id='checkoutbtn' class='button button2' value='<?php echo $label; ?>'>
+        <INPUT TYPE='HIDDEN' name='x_tax' VALUE='Tax<|>state tax<|><?php echo $obj->get_tax_amount(); ?>'>
+        <INPUT TYPE='HIDDEN' name='x_duty' VALUE='Tip<|>     Tip<|><?php echo $get_payment_info['tip_amt']; ?>'>
+        <input type='submit' id='checkoutbtn' class='button button2' value='<?php echo $label; ?>'>
 	
 					</form>
 <?php

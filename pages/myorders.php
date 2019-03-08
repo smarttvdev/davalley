@@ -28,6 +28,8 @@ if (isset($_SESSION['tableSelected']) && $_SESSION['tableSelected'] == false){
 if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
     ?>
     <script type="text/javascript">
+        var barcode='';
+        var swipe_state=0;
         function download(filename, url) {
             var element = document.createElement("a");
             element.setAttribute("href", url);
@@ -83,6 +85,20 @@ if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
             return swipeData;
         }
 
+        document.onkeydown = function(d) {
+            if (swipe_state==1){
+                barcode=barcode+d.key;
+                $("#txtSwipe").val(barcode);
+                console.log(barcode);
+                if (barcode.length==78){
+                    swipe_state=0;
+                    processSwipe(barcode);
+                    $("#checkOutSubmit").submit();
+                }
+            }
+
+        };
+
         $(function() {
             $("#swipe-dialog").dialog({
                 autoOpen: false,
@@ -90,23 +106,14 @@ if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
                 width: 280,
                 modal: true,
                 open: function(event, ui) {
-                    $("#txtSwipe").val('');
-                    $("#txtSwipe").focus();
-                    $("#txtSwipe").keypress(function() {
-                        if ($(this).val().length == 78) {
-                            $(this).blur();
-                            processSwipe($(this).val());
-                            //$("#checkOutSubmit").submit();
-                        }
-                    });
-                    $("body").click(function() {
-                        $('#txtSwipe').focus();
-                    });
+                    barcode='';
+                    swipe_state=1;
+                    console.log(barcode);
+
                 },
                 buttons: {
                     Cancel: function() {
                         $(this).dialog("close");
-                        $("body").unbind("click");
                     },
                     Test: function() {
 //					processSwipe("%B6543210000000000^DOE/JOHN                  ^0000000000000000000ABC123456789?");
@@ -114,6 +121,46 @@ if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
                     }
                 }
             });
+        });
+
+
+        $(function() {
+
+
+
+//             $("#swipe-dialog").dialog({
+//                 autoOpen: false,
+//                 height: 200,
+//                 width: 280,
+//                 modal: true,
+//                 open: function(event, ui) {
+//                     $("#txtSwipe").val('');
+//                     $("#txtSwipe").focus();
+//
+//                     $("#txtSwipe").on('keypress',function() {
+//                         console.log($(this).val())
+//                         if ($(this).val().length == 78) {
+//                             $(this).blur();
+//                             processSwipe($(this).val());
+//                             $("#checkOutSubmit").submit();
+//                         }
+//                     });
+//
+//                     $("body").click(function() {
+//                         $('#txtSwipe').focus();
+//                     });
+//                 },
+//                 buttons: {
+//                     Cancel: function() {
+//                         $(this).dialog("close");
+//                         $("body").unbind("click");
+//                     },
+//                     Test: function() {
+// //					processSwipe("%B6543210000000000^DOE/JOHN                  ^0000000000000000000ABC123456789?");
+// //					$("#checkOutSubmit").submit();
+//                     }
+//                 }
+//             });
 
             $("#swipecardbtn").click(function() {
                 $.getJSON( API + "?action=checkPhone", function( data ) {
@@ -147,7 +194,7 @@ if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
 
     </script>
     <div id="swipe-dialog" style="display:none;">
-        <input id="txtSwipe" type="text" style="position: absolute; top: -1000px;" />
+        <input id="txtSwipe" type="text" style="position: absolute; top: -1000px;" readonly/>
         <div style="padding: 10px 0 0 10px;">
             Please swipe your credit card...
         </div>
