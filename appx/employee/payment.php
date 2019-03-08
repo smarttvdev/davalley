@@ -16,34 +16,6 @@ $get_payment_info = $obj->get_payment_info($_REQUEST['order_id']);
 //print_r($get_payment_info);
 //print_r($get_payment_info);
 ?>
-<!---->
-<!--<!--Keyboard Part-->
-<!--<link href="js/Keyboard/docs/css/jquery-ui.min.css" rel="stylesheet">-->
-<!--<script src="js/Keyboard/docs/js/jquery-ui.min.js"></script>-->
-<!--<link href="js/Keyboard/css/keyboard.css" rel="stylesheet">-->
-<!--<script src="js/Keyboard/js/jquery.keyboard.js"></script>-->
-<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
-<!--<style>-->
-<!--    /*!*.ui-keyboard-button {*!*/-->
-<!--        /*!*!*height: 3em;*!*!*/-->
-<!--        /*!*!*min-width: 5em;*!*!*/-->
-<!--        /*!*margin: .1em;*!*/-->
-<!--        /*!*cursor: pointer;*!*/-->
-<!--        /*!*overflow: hidden;*!*/-->
-<!--        /*!*line-height: 20px;*!*/-->
-<!--        /*!*-moz-user-focus: ignore;*!*/-->
-<!--    /*!*}*!*/-->
-<!--    /*button.ui-keyboard-button.ui-keyboard-actionkey.ui-keyboard-cancel.ui-state-default.ui-corner-all.ui-state-active{*/-->
-<!--        /*float:right;*/-->
-<!--    /*}*/-->
-<!--    /*button.ui-keyboard-button.ui-keyboard-actionkey.ui-keyboard-bksp.ui-keyboard-widekey.ui-state-default.ui-corner-all{*/-->
-<!--        /*float:right;*/-->
-<!--    /*}*/-->
-<!--    /*.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {*/-->
-<!--        /*font-family: Arial,Helvetica,sans-serif;*/-->
-<!--        /*font-size: 1.5em;*/-->
-<!--    /*}*/-->
-<!--</style>-->
 
 <div class="PaymentInfo" style="margin-bottom: 65px;">
 	<div class="container-fluid">
@@ -156,7 +128,7 @@ $get_payment_info = $obj->get_payment_info($_REQUEST['order_id']);
                     <input type="number" step=".01" placeholder="Input Amount" name="tendered_amt" id="tendered_amt" value="<?php if(isset($get_payment_info['tendered_amt'])){echo $get_payment_info['tendered_amt'];}else{ echo 0;} ?>">
                 </div>
                 <div class="form-group">
-                    <button type="button" name="cancel_order_payment" id="cancel_order_payment">Cancle</button>
+                    <button type="button" name="cancel_order_payment" id="cancel_order_payment">Cancel</button>
                 	<label>Change</label>
                     <?php //if(isset($get_payment_info['cash_change']) && ){echo $get_payment_info['cash_change'];}else{ echo 0;} ?>
                     <input type="number" step=".01" placeholder="Calculated" name="cash_change" id="cash_change" value="<?php if(isset($get_payment_info['cash_change'])){echo $get_payment_info['cash_change'];}else{ echo 0;} ?>">
@@ -178,7 +150,7 @@ include("include/footer.php");
 <script type="text/javascript">
 $(document).ready(function(){
     if($('#tendered_amt').val()>0){
-       $("#save_order_payment").hide();
+       $("#save_order_payment").css('visibility','hidden');
        $("#payment_button").show();
     }
     $("#cash_change").val(calculatecashchange());
@@ -197,52 +169,7 @@ $(document).ready(function(){
         $("#balance_amt").val(total_balance());
     });
 
-    // $('input[type=text]').keyboard({
-    //     initialFocus: false,
-    // });
-    //
-    // $('.ui-keyboard-preview').keypress(function () {
-    //     alert('hi');
-    // })
-    //
-    //
-    // $('input[type=number]').keyboard({
-    //     layout: 'custom',
-    //     customLayout: {
-    //         'normal' : [
-    //             '1 2 3 4',
-    //             '5 6 7 8',
-    //             '9 0 . {a}',
-    //             '{c} {bksp}'
-    //         ]
-    //     },
-    //     position     : {
-    //         of : null, // optional - null (attach to input/textarea) or a jQuery object (attach elsewhere)
-    //         my : 'start top',
-    //         at : 'start top',
-    //         at2: '0 bottom' // used when "usePreview" is false (centers the keyboard at the bottom of the input/textarea)
-    //     },
-    //     initialFocus: false,
-    //     // beforeInsert:function(e, keyboard, el) {
-    //     // //     // if ($(this).val()=='0'){
-    //     // //     //     console.log($(this).val())
-    //     // //     //     $(this).val('');
-    //     // //     //
-    //     // //     // }
-    //     // //     console.log('hi');
-    //     //     console.log(e);
-    //     //     console.log(el);
-    //     //     console.log(keyboard);
-    //     // //
-    //     // }
-    // });
-
-
-
-
-
-
-    $('#discount_percent_amt').keyup(function() {        
+    $('#discount_percent_amt').keyup(function() {
         $("#cash_change").val(calculatecashchange());
         $("#balance_amt").val(total_balance());
     });
@@ -250,7 +177,7 @@ $(document).ready(function(){
         $("#cash_change").val(calculatecashchange());
         $("#balance_amt").val(total_balance());
     });
-    $('#tendered_amt').keyup(function() {        
+    $('#tendered_amt').keyup(function() {
         $("#cash_change").val(calculatecashchange());
         $("#balance_amt").val(total_balance());
     });
@@ -258,6 +185,8 @@ $(document).ready(function(){
         $('#cart_payment_modal').modal('show');
     	$(".cart_due_amount").html($("#cash_change").val().replace("-",""));
         $("#cart_due_amount").html($("#cash_change").val().replace("-",""));
+        $('#cart_manual_amount').val($("#cash_change").val().replace("-",""));
+
     	var form_data = $("#payment_form").serialize();
             $.ajax({
                   type: "POST",
@@ -277,7 +206,8 @@ $(document).ready(function(){
                       data: form_data,
                       url: "ajax_response.php?save_order_payment_with_due",    
                       success: function(response){
-                        $("#save_order_payment").hide();
+                        // $("#save_order_payment").hide();
+                      $("#save_order_payment").css('visibility','hidden');
                         $("#payment_button").show();
 
                       }
@@ -311,7 +241,7 @@ $(document).ready(function(){
 
         var cart_due_amount = parseFloat($(".cart_due_amount").html());
         if($("#cart_manual_amount").val()=="" || $("#cart_manual_amount").val()<=0 || $("#cart_manual_amount").val()>cart_due_amount){
-            alert("Please Enter Correct aount");
+            alert("Please Enter Correct amount");
         }else{
             $("#manual_pay_form").submit();
         }
@@ -332,11 +262,10 @@ $(document).ready(function(){
         <input type="hidden" id="cart_due_amount" name="cart_due_amount" value="">
       </div>
       <div class="modal-body">
-        
-            <div class="form-group">
-                <label for="email">Enter Amount:</label>                
-                <input type="number" step=".01" placeholder="Enter Amount" name="cart_manual_amount" id="cart_manual_amount" value="">
-            </div>
+        <div class="form-group">
+        <label for="email">Enter Amount:</label>
+        <input type="number" step=".01" placeholder="Enter Amount" name="cart_manual_amount" id="cart_manual_amount" value="">
+        </div>
             
             <button type="button" class="swip_btn_submit" >Submit</button>
             <button type="button" class="" data-dismiss="modal">Close</button>

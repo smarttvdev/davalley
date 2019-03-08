@@ -312,11 +312,20 @@ function calculatePerc(total_order_amount,tip_percent) {
 function calculatecashchange(){
     var dis_amt = parseFloat($("#discount_percent_amt").val());
     var tip_amt = parseFloat($("#calculate_percent_amt").val());
-    var card_pay_amt = parseFloat($("#card_pay_amt").val());
-    //alert(card_pay_amt);
-    var total_order_amount = parseFloat('<?php echo $current_order_total; ?>')-card_pay_amt;    
+
+    // var card_pay_amt = parseFloat($("#card_pay_amt").val());
+    //var total_order_amount = parseFloat('<?php //echo $current_order_total; ?>//')-card_pay_amt;
+
+    var total_order_amount = parseFloat('<?php echo $current_order_total; ?>');
     var cash_change = (parseFloat($('#tendered_amt').val())-((total_order_amount+tip_amt)-dis_amt)).toFixed(2);
+
+    // console.log("dis_amt="+dis_amt);
+    // console.log("tip_amt="+tip_amt);
+    // console.log("total_order_amount="+total_order_amount);
+    // console.log("cash_change="+cash_change);
+
     return cash_change;
+
 }
 function total_balance(){
     var dis_amt = parseFloat($("#discount_percent_amt").val());
