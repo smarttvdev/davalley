@@ -58,7 +58,7 @@ if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
             }
             $("#swipe-dialog").dialog("close");
             $("body").unbind("click");
-            // $("#checkoutbtn").click();
+
             $( "#checkOutSubmit" ).submit();
         }
         //%B4100400023962734^TANG/ERIC Y             ^191220121801111884970357446000000?
@@ -86,19 +86,20 @@ if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
             return swipeData;
         }
 
-        document.onkeyup = function(d) {
+        document.onkeypress = function(d) {
             if (swipe_state==1){
                 // if(d.key!="Shift"){
                     var charcode=d.key;
-                    barcode=barcode+charcode.replace('Shift','');
+                    barcode=barcode+charcode;
+                    // barcode=barcode.replace('Shift','');
+                $('#txtSwipe').val(barcode);
                     console.log(barcode);
                     $("#txtSwipe").val(barcode);
                     console.log(barcode);
                     if (barcode.length==78){
-                        alert(barcode);
                         swipe_state=0;
                         processSwipe(barcode);
-                        $("#checkOutSubmit").submit();
+                        // $("#checkOutSubmit").submit();
                     }
                 // }
 
@@ -330,7 +331,7 @@ if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
                 $textToHash="^". $loginID."^". $transactionKey ."^". $amount."^";
                 $description 	= "Transaction Order for " . $CONFIG['company'];
                 $label 			= "Place Order"; // The is the label on the 'submit' button
-                $testMode		= "true"; // authorize.net test mode
+                $testMode		= "false"; // authorize.net test mode
                 $invoice = GetUniqueID();
                 $_SESSION['orderID'] = $invoice ;
                 $time = time();
