@@ -191,6 +191,7 @@ global $mysqli;
     $orderList = array();
 //    $q = "SELECT ordersPaid.*, items.itemName, items.itemDescription, items.itemPrice, items.itemID, items.itemCode, items.itemAudio, customers.cName FROM ordersPaid LEFT JOIN `items` ON (items.itemCode=ordersPaid.itemID) LEFT JOIN `customers` ON (ordersPaid.phone=customers.cPhone) ".$phoneNumber." ORDER BY orderID DESC " . $limit;
     $q = "SELECT ordersPaid.*, items.itemName, items.itemDescription, items.itemPrice, items.itemID, items.itemCode, items.itemAudio, customers.cName FROM ordersPaid LEFT JOIN `items` ON (items.itemID=ordersPaid.itemID) LEFT JOIN `customers` ON (ordersPaid.phone=customers.cPhone) ".$phoneNumber." ORDER BY orderID DESC, dateOrdered DESC " . $limit;
+
     $res = $mysqli->query($q) or trigger_error($mysqli->error."[$q]");;
     $num_rows = $res->num_rows;
 	$i=0;
@@ -405,7 +406,8 @@ global $mysqli;
 $sideOrder = (is_array($vars['sideOrder'])) ? implode(',',$vars['sideOrder']) : '';
 $with = (isset($vars['cookWith'])) ? " AND cookWith='".$vars['cookWith']."' " : " AND cookWith=''";
     // Select same phone and item if exist
-    $query = "SELECT * FROM `orders` WHERE itemID='".$vars['itemCode']."' ".$with." AND phoneNumber='".$vars['phoneNumber']."'";
+//    $query = "SELECT * FROM `orders` WHERE itemID='".$vars['itemCode']."' ".$with." AND phoneNumber='".$vars['phoneNumber']."'";
+    $query = "SELECT * FROM `orders` WHERE itemID='".$vars['itemID']."' ".$with." AND phoneNumber='".$vars['phoneNumber']."'";
     $result = $mysqli->query($query);
     if($result->num_rows > 0) {
     // An item exist already , update quantity
@@ -414,7 +416,8 @@ $with = (isset($vars['cookWith'])) ? " AND cookWith='".$vars['cookWith']."' " : 
     if($mysqli->affected_rows > 0) { return true; } else { return false; }
     } else {
     // An item is not exist , add it
-    $query = "INSERT INTO orders (itemID, phoneNumber, cookWith, sideOrder, quantity) VALUES ('".$vars['itemCode']."', '".$vars['phoneNumber']."','".$vars['cookWith']."','".$sideOrder."','".$vars['quantity']."');";
+//    $query = "INSERT INTO orders (itemID, phoneNumber, cookWith, sideOrder, quantity) VALUES ('".$vars['itemCode']."', '".$vars['phoneNumber']."','".$vars['cookWith']."','".$sideOrder."','".$vars['quantity']."');";
+        $query = "INSERT INTO orders (itemID, phoneNumber, cookWith, sideOrder, quantity) VALUES ('".$vars['itemID']."', '".$vars['phoneNumber']."','".$vars['cookWith']."','".$sideOrder."','".$vars['quantity']."');";
         $result = $mysqli->query($query);
     if($mysqli->affected_rows > 0) {
 	return true;	
@@ -498,18 +501,18 @@ return $string;
 
 
 function changeQuantity($itemCode, $cookWith="") {
-$found=false;
-$i=0;
-if(!is_array($_SESSION['products'])) { return $found; }
-foreach($_SESSION['products'] as $item) {
-if(($item['itemCode'] == $itemCode) && (isset($item['cookWith']) && $item['cookWith'] == $cookWith))  { 
-$found=true;
-$_SESSION['products'][$i]['quantity'] += 1;
-return $found;
-}
-$i++;
-}
-return $found;
+    $found=false;
+    $i=0;
+    if(!is_array($_SESSION['products'])) { return $found; }
+    foreach($_SESSION['products'] as $item) {
+        if(($item['itemCode'] == $itemCode) && (isset($item['cookWith']) && $item['cookWith'] == $cookWith))  {
+            $found=true;
+            $_SESSION['products'][$i]['quantity'] += 1;
+            return $found;
+        }
+        $i++;
+    }
+    return $found;
 }
 
 function employeeList($phoneNumber='') {

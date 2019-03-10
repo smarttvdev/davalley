@@ -8,6 +8,7 @@ require_once("../SMS_Module/classes/config.php");
 require_once("../SMS_Module/classes/mysqli.php");
 require_once("../SMS_Module/classes/sql.class.php");
 //var_dump($_GET);
+//var_dump($_SESSION);
  $pages = new Paginator;
  if (isset($_SESSION['tableSelected']) && $_SESSION['tableSelected'] == false){
      $_SESSION['products'] = array();

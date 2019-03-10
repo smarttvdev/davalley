@@ -90,8 +90,16 @@ $result = array();
                 unset($_SESSION['orderID']);
             if (isset($_SESSION['tableSelected']))
                 unset($_SESSION['tableSelected']);
-            if (isset($_SESSION['uniqueINV']))
-                unset($_SESSION['uniqueINV']);
+            if (isset($_SESSION['tipType']))
+                unset($_SESSION['tipType']);
+            if (isset($_SESSION['phoneNumber']))
+                unset($_SESSION['phoneNumber']);
+            if (isset($_SESSION['orderID']))
+                unset($_SESSION['orderID']);
+            if (isset($_SESSION['gone_table']))
+                unset($_SESSION['gone_table']);
+            if (isset($_SESSION['products']))
+                unset($_SESSION['products']);
 
 		}
 		

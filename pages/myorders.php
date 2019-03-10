@@ -20,6 +20,7 @@ require_once("../authorize.net/AuthorizeNet.php");
 <!-- Latest compiled and minified JavaScript -->
 <h2>Shopping Cart List</h2>
 <?php
+//var_dump($_SESSION);
 if (isset($_SESSION['tableSelected']) && $_SESSION['tableSelected'] == false){
     $_SESSION['products'] = array();
     unset($_SESSION['tableSelected']);
@@ -331,7 +332,7 @@ if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
                 $textToHash="^". $loginID."^". $transactionKey ."^". $amount."^";
                 $description 	= "Transaction Order for " . $CONFIG['company'];
                 $label 			= "Place Order"; // The is the label on the 'submit' button
-                $testMode		= "false"; // authorize.net test mode
+                $testMode		= "true"; // authorize.net test mode
                 $invoice = GetUniqueID();
                 $_SESSION['orderID'] = $invoice ;
                 $time = time();
@@ -507,5 +508,5 @@ if(isset($_SESSION['products']) && is_array($_SESSION['products'])) {
             alert('i am emv chip');
         });
     });
-    removeInvoice();
+    // removeInvoice();
 </script>

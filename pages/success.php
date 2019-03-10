@@ -8,6 +8,7 @@ require_once("../SMS_Module/classes/sql.class.php");
     $_SESSION['orderID'] = $invoice;
 
     $conf_number = "";
+//    var_dump($_SESSION);
     if(isset($_SESSION['orderID'])) { $conf_number = "Your confirmation number is #" . $_SESSION['orderID']; }
         $orderID = orderPaid($_SESSION['phoneNumber']);
         clearOrder($_SESSION['phoneNumber']);
